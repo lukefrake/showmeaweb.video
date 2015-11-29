@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for conference in site.conferences %}
+      <li>
+        <h1>{{ conference.name }}</h1>
+        <ul>
+        {% for talk in site.data[conference.file] %}
+          <li>
+            <h2 class="post-meta">{{ talk.name }} {{ talk.speaker }} - {{ talk.year }}</h2>
+            <div class='embed-container'><iframe src='http://www.youtube.com/embed/{{ talk.videoId }}' frameborder='0' allowfullscreen></iframe></div>
+          </li>
+        {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

@@ -1,0 +1,15 @@
+# Site settings
+title: Show me a web video
+email: luke@thnkr.co.uk
+description: An open source website for people to watch and share conference vidoes
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://showmeaweb.video" # the base hostname & protocol for your site
+twitter_username: lukefrake
+github_username:  lukefrake
+
+collections:
+  conferences:
+    output: true
+
+# Build settings
+markdown: kramdown

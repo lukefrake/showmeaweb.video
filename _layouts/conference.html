@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<h1>{{ page.name }}</h1>
+<ul>
+    {% for talk in page.talks %}
+      <li>
+        <h2 class="post-meta">{{ talk.name }} {{ talk.speaker }} - {{ talk.year }}</h2>
+        <div class='embed-container'><iframe src='http://www.youtube.com/embed/{{ talk.videoId }}' frameborder='0' allowfullscreen></iframe></div>
+      </li>
+    {% endfor %}
+</ul>

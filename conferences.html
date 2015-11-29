@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<ul class="conference">
+  {% for conference in site.conferences %}
+    <li class="conference_tile">
+      <a href="{{conference.url}}">
+        <div class="conference_image" style="background-image: url('{{conference.image}}')"></div>
+        <h1>{{ conference.name }}</h1>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
