@@ -9,15 +9,7 @@ layout: default
   <ul class="post-list">
     {% for conference in site.conferences %}
       <li>
-        <h1>{{ conference.name }}</h1>
-        <ul>
-        {% for talk in site.data[conference.file] %}
-          <li>
-            <h2 class="post-meta">{{ talk.name }} {{ talk.speaker }} - {{ talk.year }}</h2>
-            <div class='embed-container'><iframe src='http://www.youtube.com/embed/{{ talk.videoId }}' frameborder='0' allowfullscreen></iframe></div>
-          </li>
-        {% endfor %}
-        </ul>
+        <a href="{{conference.url}}">{{ conference.name }}</a>
       </li>
     {% endfor %}
   </ul>
