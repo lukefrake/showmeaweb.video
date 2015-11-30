@@ -4,8 +4,8 @@ email: luke@thnkr.co.uk
 description: An open source website for people to watch and share conference vidoes
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://showmeaweb.video" # the base hostname & protocol for your site
-twitter_username: lukefrake
-github_username:  lukefrake
+twitter_username: teamThnkr
+github_username: team-thnkr
 
 collections:
   conferences:

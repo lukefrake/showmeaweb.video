@@ -4,16 +4,17 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Conferences</h1>
 
-  <ul class="post-list">
+  <ul class="conference">
     {% for conference in site.conferences %}
-      <li>
-        <a href="{{conference.url}}">{{ conference.name }}</a>
+      <li class="conference_tile">
+        <a href="{{conference.url}}">
+          <div class="conference_image" style="background-image: url('{{conference.image}}')"></div>
+          <h1>{{ conference.name }}</h1>
+        </a>
       </li>
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
