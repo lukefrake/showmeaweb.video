@@ -13,7 +13,8 @@ layout: default
 	        </div>
 	        <div class="card-block">
 	        	<h4 class="card-title">{{ talk.name }}</h4>
-	        	<p class="card-text">{{ talk.speaker }} speaking in {{ talk.year }}</p>
+	        	{% if talk.blurb %}<p class="card-text">{{ talk.blurb }}</p>{% endif %}
+	        	<p class="card-text"><small class="text-muted">{{ talk.speaker }} speaking in {{ talk.year }}</small></p>
 	        </div>
 	      </li>
 	    {% endfor %}
