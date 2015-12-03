@@ -1,12 +1,21 @@
 ---
 layout: default
 ---
-<h1>{{ page.name }}</h1>
-<ul>
-    {% for talk in page.talks %}
-      <li>
-        <h2 class="post-meta">{{ talk.name }} {{ talk.speaker }} - {{ talk.year }}</h2>
-        <div class='embed-container'><iframe src='http://www.youtube.com/embed/{{ talk.videoId }}' frameborder='0' allowfullscreen></iframe></div>
-      </li>
-    {% endfor %}
-</ul>
+<h2>{{ page.name }}</h2>
+<div class="card-deck-wrapper">
+	<ul class="card-deck">
+	    {% for talk in page.talks %}
+	      <li class="talk card">
+	        <div class="card-img-top">
+	        	<div class='embed-container'>
+	        		<iframe src='http://www.youtube.com/embed/{{ talk.videoId }}' frameborder='0' allowfullscreen></iframe>
+	        	</div>
+	        </div>
+	        <div class="card-block">
+	        	<h4 class="card-title">{{ talk.name }}</h4>
+	        	<p class="card-text">{{ talk.speaker }} speaking in {{ talk.year }}</p>
+	        </div>
+	      </li>
+	    {% endfor %}
+	</ul>
+</div>

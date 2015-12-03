@@ -1,0 +1,21 @@
+{
+  "name": "showmeaweb.video",
+  "homepage": "http://showmeaweb.video",
+  "authors": [
+    "Team Thnkr <hello@thnkr.co.uk>"
+  ],
+  "description": "Watch web videos online",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4.0"
+  }
+}
